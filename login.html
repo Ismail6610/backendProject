@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login to your account</title>
 </head>
 <style>
     @font-face {
@@ -29,8 +29,8 @@
         justify-content: center;
     }
     .loginMain{
-        width: 25vw;
-        height: 80vh;
+        width: 20vw;
+        height: 70vh;
         border-radius: 50px;
         display: flex;
         align-items: center;
@@ -43,15 +43,56 @@
         font-size: 50px;
         font-family: 'SFMono-Bold', monospace;
     }
+    *{
+        font-family: 'SFMono-Regular';
+    }
+    .loginMain div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 30%;
+    }
+    .inputs{
+        border: 0.5px solid grey;
+        color: black;
+        padding: 10px;
+        border-radius: 8px;
+        width: 100%;
+    }
+    .inputs:focus{
+        outline: none;
+    }
+    button {
+    background-color: #3dcfff;
+    border: none;
+    padding: 5px;
+    width: 25%;
+    height: 7%;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 7px #3dcfff;
+}
+
+button:hover {
+    box-shadow: 0 0 20px #3dcfff, 0 0 30px #3dcfff; 
+}
+    a{
+        color: #00239c;
+        font-weight: bold;
+    }
+
 </style>
 <body>
     <form action="loginLogic.php">
         <div class="loginMain">
             <h1 id="title">LOG IN</h1>
             <div>
-                <input type="text" class="inputs" placeholder="Name" name="name">
-                <input type="text" class="inputs" placeholder="Username" name="username">
-                <input type="password" class="inputs" placeholder="Password" name="password">
+                <input type="text" class="inputs" placeholder="name" name="name">
+                <input type="text" class="inputs" placeholder="username" name="username">
+                <input type="password" class="inputs" placeholder="password" name="password">
             </div>
             <button type="submit" name="submit">Submit</button>
             <a href="register.html">Dont have an account?</a>

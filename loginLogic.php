@@ -10,7 +10,7 @@ if (isset($_GET['submit'])) {
 
 
     if (empty($name) || empty($username) || empty($password)) {
-        echo "All fields are required!";
+        alert("All fields are required!");
         exit;
     }
 
